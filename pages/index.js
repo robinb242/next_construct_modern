@@ -1,17 +1,39 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Image from 'next/image' 
+import HouseLogo from '../components/HouseLogo'
+import CmTextLogo from '../components/CmTextLogo'
 
 export default function Home() {
   return (
+    
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Construct Modern</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+<HouseLogo />
+<CmTextLogo />
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Link href="/inspiration/inspiration">
+          <a>Inspiration</a>
+          </Link>
         </h1>
 
         <p className={styles.description}>
